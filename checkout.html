@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Centro Gráfico - Checkout</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Centro Gráfico</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="checkout-section">
+      <h2>Finalizar compra</h2>
+      <form action="gracias.html" method="get" class="checkout-form">
+        <label for="nombre">Nombre completo:</label>
+        <input id="nombre" type="text" required>
+        <label for="correo">Correo electrónico:</label>
+        <input id="correo" type="email" required>
+        <label for="direccion">Dirección de envío:</label>
+        <input id="direccion" type="text" required>
+        <label for="pago">Método de pago:</label>
+        <select id="pago" required>
+          <option>Tarjeta de crédito</option>
+          <option>PayPal</option>
+          <option>OXXO</option>
+        </select>
+        <button type="submit">Confirmar pedido</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

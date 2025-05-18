@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Centro Gráfico - Catálogo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+function agregarAlCarrito(nombre, precio) {
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+  // Busca si ya existe el producto
+  let producto = carrito.find(p => p.nombre === nombre);
+  if (producto) {
+    producto.cantidad += 1;
+  } else {
+    carrito.push({ nombre, precio, cantidad: 1 });
+  }
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+  actualizarContadorCarrito();
+}
+
+// Actualiza el numerito del carrito
+function actualizarContadorCarrito() {
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+  let total = carrito.reduce((sum, p) => sum + p.cantidad, 0);
+  let contador = document.getElementById('carrito-contador');
+  if (contador) contador.textContent = total;
+}
+
+// Al cargar la página, actualiza el contador
+document.addEventListener('DOMContentLoaded', actualizarContadorCarrito);
+
+function mostrarContenido() {
+  document.getElementById('bienvenida-overlay').style.display = 'none';
+  document.getElementById('contenido-principal').style.display = 'block';
+}
+</script>
+<script>
+const navToggle = document.getElementById('nav-toggle');
+const mainNav = document.getElementById('main-nav');
+navToggle.addEventListener('click', () => {
+  mainNav.classList.toggle('open');
+});
+</script>
+<body>
+
+<div id="contenido-principal">
+  <!-- ...todo tu contenido... -->
+</div>
+<!-- Barra de anuncio -->
+<div class="envio-gratis-bar">
+  🚚 ¡Envío gratis en compras mayores a $499 MXN en todo México!
+</div>
+<header class="header-elegante">
+  <div class="nav-container">
+    <a href="index.html" class="logo-link">
+      <img src="logo.png" alt="Centro Gráfico" class="logo-nav animated-logo">
+    </a>
+    <nav class="main-nav" id="main-nav">
+      <a href="#productos">Productos</a>
+      <a href="#videos">Videos</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#acerca">Acerca de nosotros</a>
+      <a href="carrito.html" class="carrito-icono">
+        🛒
+        <span id="carrito-contador" class="carrito-contador">0</span>
+      </a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<main>
+  <h2>Catálogo de productos</h2>
+  <div class="productos-grid">
+    <div class="producto">
+      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Lona publicitaria">
+      <h3>Lona publicitaria</h3>
+      <p>Lona resistente para exterior/interior</p>
+      <span class="precio">Desde $120 MXN/m²</span>
+      <button onclick="agregarAlCarrito('Lona publicitaria', 120)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Stickers personalizados">
+      <h3>Stickers personalizados</h3>
+      <p>Stickers a color en vinil, corte incluido</p>
+      <span class="precio">Desde $80 MXN por hoja</span>
+      <button onclick="agregarAlCarrito('Stickers personalizados', 80)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Vinil adhesivo impreso">
+      <h3>Vinil adhesivo impreso</h3>
+      <p>Ideal para ventanas, paredes, rotulación</p>
+      <span class="precio">Desde $100 MXN/m²</span>
+      <button onclick="agregarAlCarrito('Vinil adhesivo impreso', 100)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=400&q=80" alt="Vinil de recorte">
+      <h3>Vinil de recorte</h3>
+      <p>Solo forma y texto, sin fondo</p>
+      <span class="precio">Desde $90 MXN/m²</span>
+      <button onclick="agregarAlCarrito('Vinil de recorte', 90)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Playeras personalizadas">
+      <h3>Playeras personalizadas</h3>
+      <p>Estampado en sublimación o vinil textil</p>
+      <span class="precio">Desde $180 MXN c/u</span>
+      <button onclick="agregarAlCarrito('Playeras personalizadas', 180)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Sublimación (tazas)">
+      <h3>Sublimación (tazas)</h3>
+      <p>Diseño personalizado a todo color</p>
+      <span class="precio">Desde $120 MXN c/u</span>
+      <button onclick="agregarAlCarrito('Sublimación (tazas)', 120)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="Tarjetas de presentación">
+      <h3>Tarjetas de presentación</h3>
+      <p>100 pzas. full color, acabado mate</p>
+      <span class="precio">Desde $200 MXN</span>
+      <button onclick="agregarAlCarrito('Tarjetas de presentación', 200)">Agregar al carrito</button>
+    </div>
+    <div class="producto">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Etiquetas adhesivas">
+      <h3>Etiquetas adhesivas</h3>
+      <p>Personalizadas, troqueladas o en rollo</p>
+      <span class="precio">Desde $90 MXN por hoja</span>
+      <button onclick="agregarAlCarrito('Etiquetas adhesivas', 90)">Agregar al carrito</button>
+    </div>
+  </div>
+  <!-- Sección de videos de la empresa -->
+  <section id="videos" class="videos-section">
+    <h2>Conoce nuestro trabajo</h2>
+    <div class="videos-grid">
+      <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/PxfuKPudii4" title="Video Centro Gráfico 1" frameborder="0" allowfullscreen></iframe>
+        <p>Ejemplo de nuestro trabajo 1</p>
+      </div>
+      <div class="video-item">
+        <iframe src="https://www.youtube.com/embed/K5n_xNj1sVQ" title="Video Centro Gráfico 2" frameborder="0" allowfullscreen></iframe>
+        <p>Ejemplo de nuestro trabajo 2</p>
+      </div>
+    </div>
+  </section>
+<section id="acerca" class="bienvenida-section">
+  <img src="logo.png" alt="Logotipo Centro Gráfico" class="logo" style="margin-bottom: 1em;">
+  <h2>Acerca de nosotros</h2>
+  <h3>Nuestra Historia</h3>
+  <p>
+    Centro Gráfico es una tienda en línea especializada en productos de impresión digital personalizados, como stickers, etiquetas, lonas publicitarias y tarjetas de presentación. Nos dirigimos a emprendedores, negocios y creativos, ofreciendo materiales gráficos de alta calidad con un enfoque en atención personalizada continua.<br><br>
+    Destacamos por nuestros altos estándares de calidad, tecnología avanzada y diseños únicos que reflejan la creatividad y profesionalismo en cada proyecto. Nuestro compromiso es brindarte soluciones gráficas únicas y personalizadas para potenciar tu marca o negocio.
+  </p>
+</section>
+</main>
+</div>
+</body>
+</html>

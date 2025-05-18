@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Centro Gráfico</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Centro Gráfico Tienda</h1>
+            <nav>
+                <ul>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="productos-grid">
+                <div class="producto">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Lona publicitaria">
+                    <h3>Lona publicitaria</h3>
+                    <p>Lona resistente para exterior/interior</p>
+                    <span class="precio">Desde $120 MXN/m²</span>
+                    <button>Comprar</button>
+                </div>
+                <div class="producto">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Stickers personalizados">
+                    <h3>Stickers personalizados</h3>
+                    <p>Stickers a color en vinil, corte incluido</p>
+                    <span class="precio">Desde $80 MXN por hoja</span>
+                    <button>Comprar</button>
+                </div>
+                <div class="producto">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Vinil adhesivo impreso">
+                    <h3>Vinil adhesivo impreso</h3>
+                    <p>Ideal para ventanas, paredes, rotulación</p>
+                    <span class="precio">Desde $100 MXN/m²</span>
+                    <button>Comprar</button>
+                </div>
+                <div class="producto">
+                    <img src="https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=400&q=80" alt="Vinil de recorte">
+                    <h3>Vinil de recorte</h3>
+                    <p>Solo forma y texto, sin fondo</p>
+                    <span class="precio">Desde $90 MXN/m²</span>
+                    <button>Comprar</button>
+                </div>
+                <div class="producto">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Playeras personalizadas">
+                    <h3>Playeras personalizadas</h3>
+                    <p>Estampado en sublimación o vinil textil</p>
+                    <span class="precio">Desde $180 MXN c/u</span>
+                    <button>Comprar</button>
+                </div>
+                <div class="producto">
+                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Sublimación (tazas)">
+                    <h3>Sublimación (tazas)</h3>
+                    <p>Diseño personalizado a todo color</p>
+                    <span class="precio">Desde $120 MXN c/u</span>
+                    <button>Comprar</button>
+                </div>
+                <div class="producto">
+                    <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="Tarjetas de presentación">
+                    <h3>Tarjetas de presentación</h3>
+                    <p>100 pzas. full color, acabado mate</p>
+                    <span class="precio">Desde $200 MXN</span>
+                    <button>Comprar</button>
+                </div>
+                <div class="producto">
+                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Etiquetas adhesivas">
+                    <h3>Etiquetas adhesivas</h3>
+                    <p>Personalizadas, troqueladas o en rollo</p>
+                    <span class="precio">Desde $90 MXN por hoja</span>
+                    <button>Comprar</button>
+                </div>
+            </div>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Centro Gráfico Tienda</p>
+    </footer>
+</body>
+</html>

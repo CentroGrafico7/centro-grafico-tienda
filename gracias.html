@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Gracias por tu compra!</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gracias-section {
+      max-width: 400px;
+      margin: 5em auto 0 auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(44,83,100,0.13);
+      padding: 2.5em 2em;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
+    .gracias-section h2 {
+      color: #2c5364;
+      font-size: 2em;
+      margin-bottom: 0.5em;
+    }
+    .gracias-section .icono-check {
+      font-size: 3.5em;
+      color: #ffd700;
+      margin-bottom: 0.3em;
+      display: block;
+      animation: pop 0.7s;
+    }
+    .gracias-section p {
+      color: #444;
+      font-size: 1.1em;
+      margin-bottom: 2em;
+    }
+    .gracias-section a {
+      display: inline-block;
+      background: linear-gradient(90deg, #ffd700 0%, #ffb347 100%);
+      color: #222;
+      padding: 0.8em 2em;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: background 0.2s, color 0.2s;
+    }
+    .gracias-section a:hover {
+      background: linear-gradient(90deg, #ffb347 0%, #ffd700 100%);
+      color: #0f2027;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes pop {
+      0% { transform: scale(0.5);}
+      80% { transform: scale(1.2);}
+      100% { transform: scale(1);}
+    }
+  </style>
+  <script>
+    // Limpia el carrito al llegar a la página de gracias
+    window.onload = function() {
+      localStorage.removeItem('carrito');
+      let contador = document.getElementById('carrito-contador');
+      if (contador) contador.textContent = '0';
+    }
+  </script>
+</head>
+<body>
+  <section class="gracias-section">
+    <span class="icono-check">✔️</span>
+    <h2>¡Gracias por tu compra!</h2>
+    <p>Hemos recibido tu pedido y pronto nos pondremos en contacto contigo.<br>
+    Si tienes dudas, puedes escribirnos desde la sección de contacto.</p>
+    <a href="index.html">Volver al inicio</a>
+  </section>
+</body>
+</html>
