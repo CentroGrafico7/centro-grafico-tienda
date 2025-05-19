@@ -1,11 +1,4 @@
-/* Fondo general */
 body {
-  background: linear-gradient(120deg, #f5f6fa 60%, #ffe9c7 100%);
-  color: #222;
-  font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}body {
   font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
   background: #f5f6fa;
   color: #222;
@@ -1029,3 +1022,56 @@ navToggle.addEventListener('click', () => {
   mainNav.classList.toggle('open');
 });
 </script>
+.redes-sociales {
+  margin-top: 2em;
+  text-align: center;
+}
+.redes-sociales h3 {
+  margin-bottom: 1em;
+  color: #a67c52;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+.red-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  margin: 0 1em 1em 1em;
+  padding: 0.8em 1.8em;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #222;
+  background: #fff;
+  font-size: 1.1em;
+  box-shadow: 0 2px 12px #b08d5733;
+  border: 2px solid #eee;
+  transition: background 0.2s, transform 0.2s, color 0.2s, border 0.2s;
+}
+.red-social .icono-red {
+  display: flex;
+  align-items: center;
+}
+.red-social.instagram:hover {
+  border-color: #d6249f;
+  color: #d6249f;
+  background: #fff0fa;
+}
+.red-social.tiktok:hover {
+  border-color: #25F4EE;
+  color: #000;
+  background: #e0f7fa;
+}
+.red-social.facebook:hover {
+  border-color: #1877f3;
+  color: #1877f3;
+  background: #e3f0ff;
+}
+.red-social:hover {
+  transform: scale(1.08);
+}
+/* Aviso de cookies moderno y centrado */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%);}
+  to { opacity: 1; transform: translate(-50%, -50%);}
+}
