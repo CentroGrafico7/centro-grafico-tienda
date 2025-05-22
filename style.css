@@ -1143,27 +1143,6 @@ a.volver-inicio:hover {
     width: 90%;
   }
 }
-.cookie-banner {
-  display: none;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  color: #1a2238;
-  border-radius: 18px;
-  box-shadow: 0 8px 32px #0003;
-  padding: 2em 2.5em;
-  z-index: 9999;
-  align-items: center;
-  gap: 1.5em;
-  font-size: 1.1em;
-  flex-direction: column;
-  min-width: 320px;
-  max-width: 90vw;
-  text-align: center;
-  animation: fadeIn 0.8s;
-}
 .cookie-banner button {
   background: linear-gradient(90deg, #ffd700 0%, #3a4a7c 100%);
   color: #fff;
@@ -1183,4 +1162,135 @@ a.volver-inicio:hover {
 @keyframes fadeIn {
   from { opacity: 0; transform: translate(-50%, -60%);}
   to { opacity: 1; transform: translate(-50%, -50%);}
+}
+.cookie-banner button {
+  background: linear-gradient(90deg, #ffd700 0%, #3a4a7c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8em 2em;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 12px #3a4a7c22;
+}
+.cookie-banner button:hover {
+  background: linear-gradient(90deg, #3a4a7c 0%, #ffd700 100%);
+  color: #fffbe6;
+  transform: scale(1.05);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%);}
+  to { opacity: 1; transform: translate(-50%, -50%);}
+}
+/* Centrar el aviso de cookies en pantalla */
+.cookie-banner button {
+  background: linear-gradient(90deg, #ffd700 0%, #3a4a7c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8em 2em;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 12px #3a4a7c22;
+}
+.cookie-banner button:hover {
+  background: linear-gradient(90deg, #3a4a7c 0%, #ffd700 100%);
+  color: #fffbe6;
+  transform: scale(1.05);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%);}
+  to { opacity: 1; transform: translate(-50%, -50%);}
+}
+.footer-legal {
+  background: #1a2238;
+  color: #ffd700;
+  text-align: center;
+  padding: 2em 0 1em 0;
+  border-radius: 18px 18px 0 0;
+  margin-top: 3em;
+  box-shadow: 0 -2px 16px #3a4a7c33;
+  font-size: 1em;
+}
+
+.footer-legal .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 0.7em;
+}
+
+.footer-legal .footer-links a {
+  color: #ffd700;
+  text-decoration: underline;
+  margin: 0 0.5em;
+  font-weight: 500;
+  font-size: 1.08em;
+  transition: color 0.2s;
+}
+
+.footer-legal .footer-links a:hover {
+  color: #fffbe6;
+}
+
+.footer-legal .footer-links span {
+  color: #ffd70099;
+  margin: 0 0.2em;
+}
+
+.footer-legal .footer-copy {
+  font-size: 0.95em;
+  color: #ffd700cc;
+}
+.cookie-banner {
+  display: flex;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: #1a2238;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #0003;
+  padding: 2em 2.5em;
+  z-index: 9999;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2em;
+  font-size: 1.1em;
+  min-width: 320px;
+  max-width: 90vw;
+  text-align: center;
+  animation: fadeIn 0.8s;
+}
+/* Botón de correo en contacto */
+.contacto-correo {
+  margin: 2em 0 1.5em 0;
+  text-align: center;
+}
+.btn-contacto-correo {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffd700 0%, #3a4a7c 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1em;
+  padding: 0.8em 2em;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px #ffd70033;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  letter-spacing: 1px;
+}
+.btn-contacto-correo:hover {
+  background: linear-gradient(90deg, #3a4a7c 0%, #ffd700 100%);
+  color: #fffbe6;
+  transform: scale(1.05);
 }

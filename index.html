@@ -144,13 +144,20 @@ navToggle.addEventListener('click', () => {
       </div>
     </div>
   </section>
-  <section id="contacto" class="bienvenida-section fondo-cafe">
+ <section id="contacto" class="bienvenida-section fondo-cafe">
   <h2>Contacto</h2>
-  <p>Puedes escribirnos por correo o en nuestras redes sociales:</p>
-  <!-- Redes sociales de la tienda -->
-<div class="redes-sociales">
-  <h3>Síguenos en redes sociales</h3>
-  <a href="https://www.instagram.com/grafico.centro?igsh=YmQ2dDB0d2VzajJx" target="_blank" class="red-social instagram" title="Instagram">
+  <p>
+    ¿Tienes dudas, necesitas una cotización o quieres hacer un pedido?<br>
+    Escríbenos por correo o en nuestras redes sociales:
+  </p>
+  <div class="contacto-correo">
+    <a href="mailto:centrografico971@gmail.com" class="btn-contacto-correo">
+      📧 centrografico971@gmail.com
+    </a>
+  </div>
+  <div class="redes-sociales">
+    <h3>Síguenos en redes sociales</h3>
+  <a href="https://www.instagram.com/centro.grafico54?igsh=ank0M3Z6eGxrOGUx" target="_blank" class="red-social instagram" title="Instagram">
   <span class="icono-red">
     <!-- Instagram SVG compatible -->
     <svg width="28" height="28" viewBox="0 0 448 512" fill="#d6249f" xmlns="http://www.w3.org/2000/svg">
@@ -208,24 +215,6 @@ navToggle.addEventListener('click', () => {
     &copy; 2025 Centro Gráfico. Todos los derechos reservados.
   </div>
 </footer>
-<!-- Aviso de cookies sencillo y centrado -->
-<div id="cookie-banner" class="cookie-banner" style="display:none;">
-  <p>
-    Utilizamos cookies para mejorar tu experiencia.
-    <a href="cookies.html" target="_blank" style="color:#3a4a7c;text-decoration:underline;">Saber más</a>
-  </p>
-  <button id="aceptar-cookies">Aceptar</button>
-</div>
-<script>
-  window.addEventListener('DOMContentLoaded', function() {
-    if (!localStorage.getItem('cookiesAceptadas')) {
-      document.getElementById('cookie-banner').style.display = 'flex';
-    }
-    document.getElementById('aceptar-cookies').onclick = function() {
-      document.getElementById('cookie-banner').style.display = 'none';
-      localStorage.setItem('cookiesAceptadas', 'true');
-    }
-  });
 </script>
 </body>
 </html>
