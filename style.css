@@ -1,6 +1,6 @@
 body {
   font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
-  background: #f5f6fa;
+  background: linear-gradient(120deg, #99adc1 60%, #7d8aab 100%);
   color: #222;
   margin: 0;
   padding: 0;
@@ -138,99 +138,69 @@ checkout-form button:hover {
   .checkout-section {
     padding: 1.5em 0.5em;
   }
-}/* Productos grid y tarjetas */
+}
+/* Productos grid y tarjetas */
 .productos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2em;
-  margin-bottom: 3em;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 2em 1em;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px #b08d5733;
+  margin: 2em auto;
+  max-width: 1200px;
 }
 
 .producto {
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(26,34,56,0.10);
-  padding: 2em 1.2em 1.5em 1.2em;
+  background: linear-gradient(120deg, #f8fafc 60%, #e0e7ff 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #3a4a7c22;
+  padding: 1.5em 1em 1em 1em;
   text-align: center;
-  transition: transform 0.25s cubic-bezier(.21,1.02,.73,1.01), box-shadow 0.25s;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1.5px solid #e0e0e0;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .producto:hover {
-  transform: translateY(-12px) scale(1.04) rotate(-1deg);
-  box-shadow: 0 16px 40px rgba(26,34,56,0.18);
-  border-color: #ffd700;
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px #3a4a7c33;
 }
 
 .producto img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 16px;
+  border-radius: 12px;
   margin-bottom: 1em;
-  box-shadow: 0 2px 12px #ffd70033;
-  transition: filter 0.3s;
-}
-
-.producto:hover img {
-  filter: brightness(1.12) saturate(1.2);
+  max-width: 100%;
+  height: 160px;
+  object-fit: cover;
 }
 
 .producto h3 {
-  margin: 0.5em 0 0.3em 0;
-  font-size: 1.25em;
   color: #1a2238;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-weight: 700;
-  letter-spacing: 1px;
-  transition: color 0.2s;
-}
-
-.producto:hover h3 {
-  color: #ffd700;
+  margin-bottom: 0.5em;
 }
 
 .producto .precio {
-  font-size: 1.15em;
-  color: #1a2238;
+  color: #3a4a7c;
   font-weight: bold;
-  margin-bottom: 1em;
-  background: #ffd70022;
-  padding: 0.3em 1em;
-  border-radius: 8px;
-  display: inline-block;
+  font-size: 1.1em;
 }
 
 .producto button {
-  background: linear-gradient(90deg, #ffd700 0%, #ffb347 100%);
-  color: #1a2238;
+  background: linear-gradient(90deg, #ffd700 0%, #3a4a7c 100%);
+  color: #fff;
   border: none;
-  padding: 0.8em 2.2em;
-  border-radius: 10px;
-  font-size: 1.1em;
-  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.7em 1.5em;
+  font-weight: bold;
+  font-size: 1em;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
-  box-shadow: 0 2px 8px #ffd70044;
   margin-top: 1em;
+  transition: background 0.2s, color 0.2s;
 }
 
 .producto button:hover {
-  background: linear-gradient(90deg, #ffb347 0%, #ffd700 100%);
+  background: linear-gradient(90deg, #3a4a7c 0%, #ffd700 100%);
   color: #fff;
-  transform: scale(1.08);
-}
-
-.producto button:active {
-  animation: pulse 0.2s;
 }
 
 @keyframes pulse {
@@ -257,7 +227,7 @@ checkout-form button:hover {
 }
 
 .main-nav a {
-  color: #1a2238;
+  color: #dddfe3;
   font-weight: 700;
   font-size: 1.1em;
   text-decoration: none;
@@ -480,40 +450,19 @@ checkout-form button:hover {
   letter-spacing: 1px;
 }
 /* Sección de bienvenida / Acerca de nosotros */
-.bienvenida-section {
-  max-width: 700px;
-  margin: 2.5em auto 3em auto;
-  background: linear-gradient(90deg, #f5f6fa 60%, #ffd70022 100%);
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(44,83,100,0.08);
-  padding: 2.5em 2em 2em 2em;
-  text-align: center;
-  animation: fadeIn 1.2s;
-}
-
-.bienvenida-section h2 {
+.bienvenida-section, .fondo-cafe {
+  background: linear-gradient(120deg, #e0e7ff 60%, #fffbe6 100%);
   color: #1a2238;
-  font-size: 2.1em;
-  margin-bottom: 0.2em;
-  letter-spacing: 1px;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-weight: 700;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(44,83,100,0.10);
+  padding: 2.5em 2em 2em 2em;
+  margin: 2.5em auto 3em auto;
+  max-width: 900px;
+  text-align: center;
 }
 
-.bienvenida-section h3 {
-  color: #ffd700;
-  font-size: 1.3em;
-  margin-bottom: 0.7em;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.bienvenida-section p {
-  color: #222;
-  font-size: 1.15em;
-  line-height: 1.7;
-  margin: 0 auto;
-  max-width: 600px;
+.bienvenida-section h2, .bienvenida-section h3 {
+  color: #3a4a7c;
 }
 
 @keyframes fadeIn {
@@ -636,13 +585,16 @@ html {
 }
 /* Menú elegante tipo calisticker.com */
 .header-elegante {
-  background: #fff;
-  box-shadow: 0 2px 16px #0001;
+  background: linear-gradient(90deg, #1a2238 60%, #3a4a7c 100%);
+  color: #ffd700;
+  box-shadow: 0 4px 24px rgb(222, 224, 227);
+  padding: 1.5em 0 1em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: sticky;
   top: 0;
-  z-index: 1000;
-  width: 100%;
-  animation: fadeInDown 1s;
+  z-index: 100;
 }
 
 @keyframes fadeInDown {
@@ -803,8 +755,8 @@ html {
 /* Barra de anuncio animada */
 .envio-gratis-bar {
   width: 100%;
-  background: linear-gradient(90deg, #ffd700 0%, #ffb347 100%);
-  color: #1a2238;
+  background: linear-gradient(90deg, #ffd700 0%, #3a4a7c 100%);
+  color: #fff;
   font-weight: 700;
   text-align: center;
   padding: 0.85em 0;
@@ -1071,6 +1023,163 @@ navToggle.addEventListener('click', () => {
   transform: scale(1.08);
 }
 /* Aviso de cookies moderno y centrado */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%);}
+  to { opacity: 1; transform: translate(-50%, -50%);}
+}
+footer {
+  background: linear-gradient(90deg, #1a2238 60%, #3a4a7c 100%);
+  color: #ffd700;
+  text-align: center;
+  padding: 2em 0 1em 0;
+  border-radius: 18px 18px 0 0;
+  margin-top: 3em;
+  box-shadow: 0 -2px 16px #3a4a7c33;
+}
+
+a, .red-social {
+  transition: color 0.2s, background 0.2s, transform 0.2s;
+}
+a:hover, .red-social:hover {
+  color: #ffffff;
+  background: #3a4a7c22;
+  transform: scale(1.05);
+}
+/* Footer legal moderno */
+.footer-legal {
+  background: #1a2238;
+  color: #ffd700;
+  text-align: center;
+  padding: 2em 0 1em 0;
+  border-radius: 18px 18px 0 0;
+  margin-top: 3em;
+  box-shadow: 0 -2px 16px #3a4a7c33;
+  font-size: 1em;
+}
+.footer-legal .footer-links {
+  margin-bottom: 0.7em;
+}
+.footer-legal .footer-links a {
+  color: #ffd700;
+  text-decoration: underline;
+  margin: 0 0.5em;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.footer-legal .footer-links a:hover {
+  color: #fffbe6;
+}
+.footer-legal .footer-links span {
+  color: #ffd70099;
+  margin: 0 0.2em;
+}
+.footer-legal .footer-copy {
+  font-size: 0.95em;
+  color: #ffd700cc;
+}
+
+/* Modal de configuración de cookies */
+.modal-cookies {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(26,34,56,0.85);
+  align-items: center;
+  justify-content: center;
+}
+.modal-cookies-content {
+  background: #fff;
+  color: #1a2238;
+  border-radius: 14px;
+  padding: 2em 2.5em;
+  max-width: 90vw;
+  text-align: center;
+  box-shadow: 0 8px 32px #0003;
+}
+.modal-cookies-content h3 {
+  margin-top: 0;
+  color: #3a4a7c;
+}
+.modal-cookies-content button {
+  margin-top: 1.5em;
+  background: linear-gradient(90deg, #ffd700 0%, #3a4a7c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.5em;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.modal-cookies-content button:hover {
+  background: linear-gradient(90deg, #3a4a7c 0%, #ffd700 100%);
+  color: #fff;
+}
+a.volver-inicio {
+  display: inline-block !important;
+  margin: 2em auto 1.5em auto !important;
+  padding: 0.7em 1.6em !important;
+  background: linear-gradient(90deg, #ffd700 0%, #3a4a7c 100%) !important;
+  color: #fff !important;
+  font-weight: bold !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  font-size: 1.08em !important;
+  box-shadow: 0 2px 12px #3a4a7c22 !important;
+  transition: background 0.2s, color 0.2s, transform 0.2s !important;
+  text-align: center !important;
+}
+a.volver-inicio:hover {
+  background: linear-gradient(90deg, #3a4a7c 0%, #ffd700 100%) !important;
+  color: #fffbe6 !important;
+  transform: scale(1.06) !important;
+}
+@media (max-width: 600px) {
+  a.volver-inicio {
+    font-size: 1em !important;
+    padding: 0.7em 1em !important;
+    width: 90%;
+  }
+}
+.cookie-banner {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: #1a2238;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #0003;
+  padding: 2em 2.5em;
+  z-index: 9999;
+  align-items: center;
+  gap: 1.5em;
+  font-size: 1.1em;
+  flex-direction: column;
+  min-width: 320px;
+  max-width: 90vw;
+  text-align: center;
+  animation: fadeIn 0.8s;
+}
+.cookie-banner button {
+  background: linear-gradient(90deg, #ffd700 0%, #3a4a7c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8em 2em;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background 0.2s, color 0.2s;
+}
+.cookie-banner button:hover {
+  background: linear-gradient(90deg, #3a4a7c 0%, #ffd700 100%);
+  color: #fffbe6;
+}
 @keyframes fadeIn {
   from { opacity: 0; transform: translate(-50%, -60%);}
   to { opacity: 1; transform: translate(-50%, -50%);}

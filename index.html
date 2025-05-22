@@ -194,5 +194,38 @@ navToggle.addEventListener('click', () => {
 </section>
 </main>
 </div>
+<footer class="footer-legal">
+  <div class="footer-links">
+    <a href="privacidad.html" target="_blank">Política de Privacidad</a>
+    <span>|</span>
+    <a href="cookies.html" target="_blank">Política de Cookies</a>
+    <span>|</span>
+    <a href="condiciones.html" target="_blank">Condiciones de Compra</a>
+    <span>|</span>
+    <a href="terminos.html" target="_blank">Términos y Condiciones</a>
+  </div>
+  <div class="footer-copy">
+    &copy; 2025 Centro Gráfico. Todos los derechos reservados.
+  </div>
+</footer>
+<!-- Aviso de cookies sencillo y centrado -->
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <p>
+    Utilizamos cookies para mejorar tu experiencia.
+    <a href="cookies.html" target="_blank" style="color:#3a4a7c;text-decoration:underline;">Saber más</a>
+  </p>
+  <button id="aceptar-cookies">Aceptar</button>
+</div>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    if (!localStorage.getItem('cookiesAceptadas')) {
+      document.getElementById('cookie-banner').style.display = 'flex';
+    }
+    document.getElementById('aceptar-cookies').onclick = function() {
+      document.getElementById('cookie-banner').style.display = 'none';
+      localStorage.setItem('cookiesAceptadas', 'true');
+    }
+  });
+</script>
 </body>
 </html>
