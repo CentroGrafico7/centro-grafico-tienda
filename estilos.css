@@ -187,26 +187,3 @@ footer {
         padding: 0 0.5em;
     }
 }
-/* Centrar el aviso de cookies en pantalla */
-.cookie-banner {
-  display: none;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  color: #1a2238;
-  border-radius: 18px;
-  box-shadow: 0 8px 32px #0003;
-  padding: 2em 2.5em;
-  z-index: 9999;
-  align-items: center;
-  gap: 1.5em;
-  font-size: 1.1em;
-  flex-direction: column;
-  min-width: 320px;
-  max-width: 90vw;
-  text-align: center;
-  animation: fadeIn 0.8s;
-  display: flex; /* <-- ¡Esto es clave! */
-}
