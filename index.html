@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Centro Gráfico - Catálogo</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="prueba.css">
 </head>
 <script>
 function agregarAlCarrito(nombre, precio) {
@@ -218,6 +218,8 @@ navToggle.addEventListener('click', () => {
   </a>
 </div>
 </section>
+<!-- ...otras secciones... -->
+
 <section id="acerca" class="bienvenida-section">
   <img src="logo.png" alt="Logotipo Centro Gráfico" class="logo" style="margin-bottom: 1em;">
   <h2>Acerca de nosotros</h2>
@@ -228,7 +230,8 @@ navToggle.addEventListener('click', () => {
   </p>
 </section>
 </main>
-</div>
+</div> <!-- ← Cierre de #contenido-principal aquí, antes del footer -->
+
 <footer class="footer-legal">
   <div class="footer-links">
     <a href="privacidad.html" target="_blank">Política de Privacidad</a>
@@ -243,6 +246,31 @@ navToggle.addEventListener('click', () => {
     &copy; 2025 Centro Gráfico. Todos los derechos reservados.
   </div>
 </footer>
-</script>
+
+<!-- Botón flotante de WhatsApp SIEMPRE fuera del div y del footer -->
+<a href="https://wa.me/5219999999999" class="whatsapp-float" target="_blank" title="¡Chatea con nosotros por WhatsApp!">
+  <svg width="38" height="38" viewBox="0 0 48 48" fill="none">
+    <circle cx="24" cy="24" r="24" fill="#25d366"/>
+    <path d="M34.6 29.2c-.5-.2-2.9-1.4-3.3-1.6-.4-.2-.7-.2-1 .2-.3.4-1.1 1.6-1.4 1.9-.3.3-.5.4-1 .1-.5-.2-2-0.7-3.8-2.3-1.4-1.2-2.3-2.7-2.6-3.2-.3-.5 0-.7.2-.9.2-.2.5-.6.7-.9.2-.3.2-.5.3-.8.1-.3 0-.6 0-.8 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6-.2 0-.5 0-.8 0-.3 0-.7.1-1.1.5-.4.4-1.5 1.5-1.5 3.6 0 2.1 1.5 4.1 1.7 4.4.2.3 3 4.7 7.3 6.1.7.2 1.3.3 1.7.4.7.1 1.3.1 1.8.1.5 0 1.5-.2 2.2-.7.7-.5 1.1-1.2 1.2-1.6.1-.4.1-.7.1-.8 0-.1-.2-.2-.7-.4z" fill="#fff"/>
+  </svg>
+</a>
+<!-- Texto flotante con logo de WhatsApp -->
+<div style="position:fixed;bottom:32px;right:90px;z-index:99999;background:#fff;color:#25d366;font-weight:bold;padding:8px 16px;border-radius:20px;box-shadow:0 2px 8px #0002;font-size:16px;display:flex;align-items:center;">
+  <svg width="22" height="22" viewBox="0 0 48 48" fill="none" style="margin-right:8px;">
+    <circle cx="24" cy="24" r="24" fill="#25d366"/>
+    <path d="M34.6 29.2c-.5-.2-2.9-1.4-3.3-1.6-.4-.2-.7-.2-1 .2-.3.4-1.1 1.6-1.4 1.9-.3.3-.5.4-1 .1-.5-.2-2-0.7-3.8-2.3-1.4-1.2-2.3-2.7-2.6-3.2-.3-.5 0-.7.2-.9.2-.2.5-.6.7-.9.2-.3.2-.5.3-.8.1-.3 0-.6 0-.8 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6-.2 0-.5 0-.8 0-.3 0-.7.1-1.1.5-.4.4-1.5 1.5-1.5 3.6 0 2.1 1.5 4.1 1.7 4.4.2.3 3 4.7 7.3 6.1.7.2 1.3.3 1.7.4.7.1 1.3.1 1.8.1.5 0 1.5-.2 2.2-.7.7-.5 1.1-1.2 1.2-1.6.1-.4.1-.7.1-.8 0-.1-.2-.2-.7-.4z" fill="#fff"/>
+  </svg>
+  <span>Atención 24 hrs</span>
+</div>
+
+<!-- Botón flotante de WhatsApp -->
+<a style="position:fixed;bottom:24px;right:24px;z-index:99999;background:#25d366;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;" href="https://wa.me/5219999999999" target="_blank" title="¡Chatea con nosotros por WhatsApp!">
+  <svg width="38" height="38" viewBox="0 0 48 48" fill="none">
+    <circle cx="24" cy="24" r="24" fill="#25d366"/>
+    <path d="M34.6 29.2c-.5-.2-2.9-1.4-3.3-1.6-.4-.2-.7-.2-1 .2-.3.4-1.1 1.6-1.4 1.9-.3.3-.5.4-1 .1-.5-.2-2-0.7-3.8-2.3-1.4-1.2-2.3-2.7-2.6-3.2-.3-.5 0-.7.2-.9.2-.2.5-.6.7-.9.2-.3.2-.5.3-.8.1-.3 0-.6 0-.8 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6-.2 0-.5 0-.8 0-.3 0-.7.1-1.1.5-.4.4-1.5 1.5-1.5 3.6 0 2.1 1.5 4.1 1.7 4.4.2.3 3 4.7 7.3 6.1.7.2 1.3.3 1.7.4.7.1 1.3.1 1.8.1.5 0 1.5-.2 2.2-.7.7-.5 1.1-1.2 1.2-1.6.1-.4.1-.7.1-.8 0-.1-.2-.2-.7-.4z" fill="#fff"/>
+  </svg>
+</a>
+</body>
+</html>
 </body>
 </html>
